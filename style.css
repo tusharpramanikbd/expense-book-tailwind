@@ -1,3 +1,10 @@
 /* h1{
   color: red;
 } */
+
+.img-money{
+  width: 100%;
+  display: block;
+  height: 18rem;
+  object-fit: cover;
+}
