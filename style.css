@@ -2,9 +2,13 @@
   color: red;
 } */
 
-.img-money{
+/* .img-money{
   width: 100%;
   display: block;
   height: 18rem;
   object-fit: cover;
+} */
+
+.input-div-field{
+  grid-template-columns: 8rem 1fr;
 }
