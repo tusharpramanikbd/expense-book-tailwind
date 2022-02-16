@@ -9,6 +9,9 @@
   object-fit: cover;
 } */
 
-.input-div-field{
+.expense-input-field{
   grid-template-columns: 8rem 1fr;
+}
+.save-input-field{
+  grid-template-columns: 4rem 1fr;
 }

@@ -32,12 +32,13 @@
       <img class="block w-full h-72 object-cover" src="./images/1.jpg" alt="Money-Img">
       <!-- end of Image section -->
 
-      <!-- Form Section -->
+      <!-- expense calculation section -->
       <div class="mt-4 bg-slate-200 p-4">
+        <!-- Form Section -->
         <form>
           <!-- Income -->
           <h1 class="text-center">Income</h1>
-          <div class="grid justify-center items-center input-div-field mt-2">
+          <div class="grid justify-center items-center expense-input-field mt-2">
             <label class="text-right" for="income">Income:</label>
             <input class="w-3/4 ml-4" type="text" name="income" id="income">
           </div>
@@ -45,17 +46,17 @@
           
           <!-- Expenses -->
           <h1 class="text-center mt-2">Expenses</h1>
-          <div class="grid justify-center items-center input-div-field mt-2">
+          <div class="grid justify-center items-center expense-input-field mt-2">
             <label class="text-right" for="food">Food:</label>
             <input class="w-3/4 ml-4" type="text" name="food" id="food">
           </div>
           
-          <div class="grid justify-center items-center input-div-field mt-2">
+          <div class="grid justify-center items-center expense-input-field mt-2">
             <label class="text-right" for="rent">Rent:</label>
             <input class="w-3/4 ml-4" type="text" name="rent" id="rent">
           </div>
           
-          <div class="grid justify-center items-center input-div-field mt-2">
+          <div class="grid justify-center items-center expense-input-field mt-2">
             <label class="text-right" for="clothes">Clothes:</label>
             <input class="w-3/4 ml-4" type="text" name="clothes" id="clothes">
           </div>
@@ -63,10 +64,12 @@
 
           <!-- Calculate button -->
           <div class="text-center mt-4">
-            <button class="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-white rounded" type="button">Calculate</button>
+            <button class="px-6 py-2 bg-cyan-500 hover:bg-cyan-400 text-white rounded" type="button">Calculate</button>
           </div>
           <!-- end of Calculate button -->
         </form>
+        <!-- end of Form Section -->
+
         <!-- Total expenses -->
         <div class="text-center mt-4">
           <span>Total Expenses: </span>
@@ -80,8 +83,23 @@
           <span>000</span>
         </div>
         <!-- end of Balance -->
+
+        <!-- Save -->
+        <div class="grid justify-center items-center save-input-field mt-2">
+          <div class="text-right" >
+            <label  for="save">Save:</label>
+          </div>
+          <div class="flex items-center justify-center">
+            <input class="w-2/5" type="text" name="save" id="save">
+            <h1 class="mx-4">%</h1>
+            <button class="px-6 py-1 bg-cyan-500 hover:bg-cyan-400 text-white rounded" type="button">Save</button>
+          </div>
+        </div>
+        <!-- end of Save -->
+        
       </div>
-      <!-- end of Form Section -->
+      <!-- end of expense calculation section -->
+      
     </div>
   </main>
   <!-- End of Main Section -->
