@@ -6,24 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expense Book || Tushar</title>
   
-  <!-- Google Font -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
   <!-- font-awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+  <script src="https://kit.fontawesome.com/98b0d66c33.js" crossorigin="anonymous"></script>
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 	<!-- CSS Style Sheet -->
 	<link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body class="font-serif">
+  <!-- Header Section -->
   <header>
-    <h1 id="title">Expense Book</h1>
+    <div class="title-container flex items-center justify-center mt-4">
+      <h1 class="text-2xl font-semibold text-teal-600">Expense Book</h1>
+      <span class="ml-1 w-8 h-8 bg-amber-300 rounded-full flex items-center justify-center"><i class="fa-solid fa-dollar-sign"></i></span>
+    </div>
   </header>
+  <!-- End of Header Section -->
   
   <script src="./js/app.js"></script>
 </body>
 </html>
+
+
+<!-- <i class="fa-solid fa-dollar-sign"></i> -->
