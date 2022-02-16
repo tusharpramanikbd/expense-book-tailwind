@@ -15,7 +15,7 @@
 	<!-- CSS Style Sheet -->
 	<link rel="stylesheet" href="./style.css">
 </head>
-<body class="font-serif ">
+<body class="font-serif">
   <!-- Header Section -->
   <header>
     <div class="title-container flex items-center justify-center mt-4">
@@ -26,44 +26,44 @@
   <!-- End of Header Section -->
 
   <!-- Main Section -->
-  <main>
-    <div class="main-container p-4 mt-4">
+  <main class="main-container">
+    <div class="pt-4 px-4 mt-4 md:grid grid-cols-2 gap-8">
       <!-- Image section -->
-      <img class="block w-full h-72 object-cover" src="./images/1.jpg" alt="Money-Img">
+      <img class="block w-full h-72 md:h-full object-cover rounded" src="./images/1.jpg" alt="Money-Img">
       <!-- end of Image section -->
 
       <!-- expense calculation section -->
-      <div class="mt-4 bg-slate-200 p-4">
+      <div class="mt-4 md:mt-0 bg-slate-100 p-4 rounded">
         <!-- Form Section -->
         <form>
           <!-- Income -->
           <h1 class="text-center text-lg">Income</h1>
-          <div class="grid justify-center items-center expense-input-field mt-2">
+          <div class="grid justify-center items-center expense-input-field mt-2 md:mt-4">
             <label class="text-right" for="income">Income:</label>
-            <input class="w-3/4 ml-4" type="text" name="income" id="income">
+            <input class="w-3/4 ml-4 bg-slate-200" type="text" name="income" id="income">
           </div>
           <!-- end of Income -->
           
           <!-- Expenses -->
           <h1 class="text-center mt-2 text-lg">Expenses</h1>
-          <div class="grid justify-center items-center expense-input-field mt-2">
+          <div class="grid justify-center items-center expense-input-field mt-2 md:mt-4">
             <label class="text-right" for="food">Food:</label>
-            <input class="w-3/4 ml-4" type="text" name="food" id="food">
+            <input class="w-3/4 ml-4 bg-slate-200" type="text" name="food" id="food">
           </div>
           
-          <div class="grid justify-center items-center expense-input-field mt-2">
+          <div class="grid justify-center items-center expense-input-field mt-2 md:mt-4">
             <label class="text-right" for="rent">Rent:</label>
-            <input class="w-3/4 ml-4" type="text" name="rent" id="rent">
+            <input class="w-3/4 ml-4 bg-slate-200" type="text" name="rent" id="rent">
           </div>
           
-          <div class="grid justify-center items-center expense-input-field mt-2">
+          <div class="grid justify-center items-center expense-input-field mt-2 md:mt-4">
             <label class="text-right" for="clothes">Clothes:</label>
-            <input class="w-3/4 ml-4" type="text" name="clothes" id="clothes">
+            <input class="w-3/4 ml-4 bg-slate-200" type="text" name="clothes" id="clothes">
           </div>
           <!-- end of Expenses -->
 
           <!-- Calculate button -->
-          <div class="text-center mt-4">
+          <div class="text-center mt-4 md:mt-4">
             <button class="px-6 py-2 bg-cyan-500 hover:bg-cyan-400 text-white rounded" type="button">Calculate</button>
           </div>
           <!-- end of Calculate button -->
@@ -71,50 +71,48 @@
         <!-- end of Form Section -->
 
         <!-- Total expenses -->
-        <div class="text-center mt-4 text-lg">
+        <div class="text-center mt-4 md:mt-4 text-lg">
           <span>Total Expenses: </span>
           <span>000</span>
         </div>
         <!-- end of Total expenses -->
 
         <!-- Balance -->
-        <div class="text-center mt-2 text-lg">
+        <div class="text-center mt-2 md:mt-4 text-lg">
           <span>Balance: </span>
           <span>000</span>
         </div>
         <!-- end of Balance -->
 
         <!-- Save -->
-        <div class="grid justify-center items-center save-input-field mt-2">
+        <div class="grid justify-center items-center save-input-field mt-2 md:mt-4">
           <div class="text-right" >
             <label  for="save">Save:</label>
           </div>
           <div class="flex items-center justify-center">
-            <input class="w-2/5" type="text" name="save" id="save">
-            <h1 class="mx-4">%</h1>
+            <input class="w-2/5 ml-4 bg-slate-200" type="text" name="save" id="save">
+            <h1 class="mx-8">%</h1>
             <button class="px-6 py-1 bg-cyan-500 hover:bg-cyan-400 text-white rounded" type="button">Save</button>
           </div>
         </div>
         <!-- end of Save -->
 
         <!-- saving amount -->
-        <div class="text-center mt-4 text-lg">
+        <div class="text-center mt-4 md:mt-4 text-lg">
           <span>Saving Amount: </span>
           <span>000</span>
         </div>
         <!-- end of saving amount -->
 
         <!-- remaining balance -->
-        <div class="text-center mt-2 text-lg">
+        <div class="text-center mt-2 md:mt-4 text-lg">
           <span>Remaining Balance: </span>
           <span>000</span>
         </div>
         <!-- end of remaining balance -->
-
-
       </div>
       <!-- end of expense calculation section -->
-      
+    
     </div>
   </main>
   <!-- End of Main Section -->

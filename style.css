@@ -13,5 +13,17 @@
   grid-template-columns: 8rem 1fr;
 }
 .save-input-field{
-  grid-template-columns: 4rem 1fr;
+  grid-template-columns: 6rem 1fr;
+}
+.main-container{
+	width: 100%;
+  height: auto;
+	margin: 0 auto;
+	max-width: 992px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-container{
+    max-height: calc(100vh - 48px);
+  }
 }
