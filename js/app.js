@@ -14,7 +14,7 @@ calculateBtn.addEventListener("click", function (){
 
     balance = income - totalExpenses;
     if(balance < 0){
-      showModal("balance can not be negative!!!");
+      showModal("Total expense can not be greater than income!!!");
       clearInput();
     }
     else{
@@ -27,11 +27,17 @@ calculateBtn.addEventListener("click", function (){
 const saveBtn = document.getElementById("save-btn");
 saveBtn.addEventListener("click", function(){
   if(isSavingsValid()){
-    const savingsAmount = (balance * savingsText) / 100;
-    document.getElementById("savings").innerText = savingsAmount.toFixed(2);
+    const savingsAmount = (income * savingsText) / 100;
 
-    const remainingBalance = balance - savingsAmount;
-    document.getElementById("remaining-balance").innerText = remainingBalance.toFixed(2);
+    if(savingsAmount > balance){
+      showModal("Savings amount can not be greater than balance!!!");
+    }
+    else{
+      document.getElementById("savings").innerText = savingsAmount.toFixed(2);
+
+      const remainingBalance = balance - savingsAmount;
+      document.getElementById("remaining-balance").innerText = remainingBalance.toFixed(2);
+    }
   }
 })
 
@@ -48,11 +54,11 @@ function isSavingsValid(){
   }
   savingsText = parseFloat(savingsText);
   if(savingsText < 0){
-    showModal("savings can not be negative!!!");
+    showModal("Savings can not be negative!!!");
     return false;
   }
   if(savingsText > 100){
-    showModal("savings can not be greater than 100%!!!");
+    showModal("Savings can not be greater than 100%!!!");
     return false;
   }
   return true;
