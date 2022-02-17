@@ -35,6 +35,7 @@ saveBtn.addEventListener("click", function(){
   }
 })
 
+// This function is checking if the savings input valid or not
 function isSavingsValid(){
   savingsText = document.getElementById("save").value.trim();
   if(savingsText === ""){
@@ -57,6 +58,7 @@ function isSavingsValid(){
   return true;
 }
 
+// This function clearing the input field on wrong input
 function clearInput(){
   document.getElementById("food").value = "";
   document.getElementById("rent").value = "";
@@ -65,6 +67,7 @@ function clearInput(){
   balanceText.innerText = "000";
 }
 
+// This function is checking if the expenses input valid or not
 function isExpenseValid(){
   foodExpense = document.getElementById("food").value.trim();
   if(foodExpense === ""){
@@ -111,6 +114,7 @@ function isExpenseValid(){
   return true;
 }
 
+// This function is checking if the income is valid or not
 function isIncomeValid(){
   income = document.getElementById("income").value.trim();
   if(income === ""){
@@ -129,6 +133,7 @@ function isIncomeValid(){
   return true;
 }
 
+// This function is showing the error modal with error message
 function showModal(errorMsg){
   const overlay = document.querySelector(".overlay");
   overlay.classList.add("show-overlay");
