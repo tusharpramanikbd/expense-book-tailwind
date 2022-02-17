@@ -1,6 +1,6 @@
 
 // Global variables
-let foodExpense, rentExpense, clothesExpense, income, totalExpensesText, balanceText;
+let foodExpense, rentExpense, clothesExpense, income, totalExpensesText, balanceText, savingsText, balance;
 
 
 // Calculate button click event listener
@@ -10,18 +10,52 @@ calculateBtn.addEventListener("click", function (){
     const totalExpenses = foodExpense + rentExpense + clothesExpense;
     balanceText = document.getElementById("balance");
     totalExpensesText = document.getElementById("total-expense");
-    totalExpensesText.innerText = totalExpenses;
+    totalExpensesText.innerText = totalExpenses.toFixed(2);
 
-    const balance = income - totalExpenses;
+    balance = income - totalExpenses;
     if(balance < 0){
       showModal("balance can not be negative!!!");
       clearInput();
     }
     else{
-      balanceText.innerText = balance;
+      balanceText.innerText = balance.toFixed(2);
     }
   }
 })
+
+// Saving button click event listener
+const saveBtn = document.getElementById("save-btn");
+saveBtn.addEventListener("click", function(){
+  if(isSavingsValid()){
+    const savingsAmount = (balance * savingsText) / 100;
+    document.getElementById("savings").innerText = savingsAmount.toFixed(2);
+
+    const remainingBalance = balance - savingsAmount;
+    document.getElementById("remaining-balance").innerText = remainingBalance.toFixed(2);
+  }
+})
+
+function isSavingsValid(){
+  savingsText = document.getElementById("save").value.trim();
+  if(savingsText === ""){
+    showModal("Savings can not be empty!!!");
+    return false
+  }
+  if(isNaN(savingsText)){
+    showModal("Please enter valid savings!!!");
+    return false
+  }
+  savingsText = parseFloat(savingsText);
+  if(savingsText < 0){
+    showModal("savings can not be negative!!!");
+    return false;
+  }
+  if(savingsText > 100){
+    showModal("savings can not be greater than 100%!!!");
+    return false;
+  }
+  return true;
+}
 
 function clearInput(){
   document.getElementById("food").value = "";
