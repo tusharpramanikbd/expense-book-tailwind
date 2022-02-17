@@ -1,6 +1,6 @@
 
 // Global variables
-let foodExpense, rentExpense, clothesExpense, income;
+let foodExpense, rentExpense, clothesExpense, income, totalExpensesText, balanceText;
 
 
 // Calculate button click event listener
@@ -8,19 +8,28 @@ const calculateBtn = document.getElementById("calculate-btn");
 calculateBtn.addEventListener("click", function (){
   if(isIncomeValid() && isExpenseValid()){
     const totalExpenses = foodExpense + rentExpense + clothesExpense;
-    const totalExpensesText = document.getElementById("total-expense");
+    balanceText = document.getElementById("balance");
+    totalExpensesText = document.getElementById("total-expense");
     totalExpensesText.innerText = totalExpenses;
 
     const balance = income - totalExpenses;
     if(balance < 0){
       showModal("balance can not be negative!!!");
+      clearInput();
     }
     else{
-      const balanceText = document.getElementById("balance");
       balanceText.innerText = balance;
     }
   }
 })
+
+function clearInput(){
+  document.getElementById("food").value = "";
+  document.getElementById("rent").value = "";
+  document.getElementById("clothes").value = "";
+  totalExpensesText.innerText = "000";
+  balanceText.innerText = "000";
+}
 
 function isExpenseValid(){
   foodExpense = document.getElementById("food").value.trim();
