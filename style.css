@@ -23,6 +23,7 @@ html{
   }
 }
 
+/* Overlay Section */
 .overlay{
   width: 100%;
   height: 100%;
@@ -37,7 +38,9 @@ html{
 .show-overlay{
   display: block;
 }
+/* End of overlay section */
 
+/* Modal Section */
 .modal-container{
   width: 80%;
   height: 25%;
@@ -78,3 +81,5 @@ html{
     grid-template-rows: 50px 1fr 50px;
   }
 }
+
+/* End of Modal Section */
